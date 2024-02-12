@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import flameImg from '../../images/flame.gif';
 
 export default function PageMain() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate('/mainlogin');
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  });
   return (
     <StyledMainWrapper>
       <h1 className="title">CHATTING PROJECT</h1>
