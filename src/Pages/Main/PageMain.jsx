@@ -12,10 +12,21 @@ export default function PageMain() {
 }
 
 const StyledMainWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
   h1 {
-    margin: 0;
-    font-size: 10rem;
+    font-size: 10vw;
     text-align: center;
+  }
+
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 60px;
+    }
   }
 
   .title {
